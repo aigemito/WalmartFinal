@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvDoyouhaveAccount"
         android:layout_width="205dp"
         android:layout_height="27dp"
         android:text="Don't have an account?"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.769" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etUserName"
         android:layout_width="324dp"
         android:layout_height="54dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,10 +28,11 @@
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335"></EditText>
+        app:layout_constraintVertical_bias="0.335"
+        android:inputType="textEmailAddress"></EditText>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivWalamartLogo"
         android:layout_width="198dp"
         android:layout_height="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +44,7 @@
         app:srcCompat="@drawable/walmart_logo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvEmail"
         android:layout_width="299dp"
         android:layout_height="40dp"
         android:text="Email address(required)"
@@ -56,8 +57,10 @@
         app:layout_constraintVertical_bias="0.27" />
 
     <EditText
+        android:id="@+id/etPassword"
         android:layout_width="324dp"
         android:layout_height="54dp"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.402"
@@ -66,7 +69,7 @@
         app:layout_constraintVertical_bias="0.499"></EditText>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvTitle"
         android:layout_width="326dp"
         android:layout_height="70dp"
         android:layout_marginEnd="44dp"
@@ -83,7 +86,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvPassword"
         android:layout_width="295dp"
         android:layout_height="35dp"
         android:text="Password(required)"
@@ -96,12 +99,13 @@
         app:layout_constraintVertical_bias="0.432" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvForgotPassword"
         android:layout_width="116dp"
         android:layout_height="29dp"
         android:autoLink="all"
         android:clickable="true"
         android:text="Forgot Password?"
+        android:onClick="onForgotPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.796"
@@ -110,7 +114,7 @@
         app:layout_constraintVertical_bias="0.579" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSignIn"
         android:layout_width="319dp"
         android:layout_height="55dp"
         android:background="#0780d9"
@@ -120,10 +124,11 @@
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintVertical_bias="0.68"
+        android:onClick="OnSignIn"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCreateNewAccount"
         android:layout_width="324dp"
         android:layout_height="54dp"
         android:background="#ffffff"
@@ -133,5 +138,6 @@
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.867"
+        android:onClick="onCreateNewAccount"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
